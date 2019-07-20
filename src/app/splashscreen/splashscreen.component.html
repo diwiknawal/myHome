@@ -1,0 +1,21 @@
+<!-- <Image src="~/image/icons8-home-page-64.png"></Image>
+<ActivityIndicator #activityIndicator busy="true"  width="30" height="30" class="activity-indicator"></ActivityIndicator> -->
+<!-- <StackLayout sdkExampleTitle sdkToggleNavButton class="p-15">
+        
+        <AbsoluteLayout (load)="animate(target)" borderRadius="20">
+            <Image #target src="~/image/icons8-home-page-64.png" class="img-rounded"></Image>
+        </AbsoluteLayout>
+    </StackLayout> -->
+
+<!-- <StackLayout (loaded)="onLoad()">
+        <Image  horizontalAlignment="center"  id="message" style="width: 100px" #target src="~/image/icons8-home-page-64.png" class="img-rounded"></Image>
+    </StackLayout> -->
+
+    <GridLayout>
+
+        <GridLayout id="message" scaleX="1.4" scaleY="1.4" class="background"
+            (loaded)="startBackgroundAnimation()"></GridLayout>
+        
+        <label text="myHome" *ngIf="showmessage"></label>
+    
+    </GridLayout>
