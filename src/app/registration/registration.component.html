@@ -1,1 +1,33 @@
-<Button text="registration works!" class="btn btn-primary"></Button>
+<ActionBar title="{N} Login Example">
+    <NavigationButton text="Back" ios.position="left"></NavigationButton>
+</ActionBar>
+<GridLayout backgroundColor="#CCCCCC">
+    <ScrollView>
+        <StackLayout margin="10" verticalAlignment="center">
+            <StackLayout class="form" padding="15" backgroundColor="#FFFFFF">
+                <StackLayout class="input-field">
+                    <Label text="First Name" class="label font-weight-bold m-b-5"></Label>
+                    <TextField class="input" [(ngModel)]="registration.FirstName"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label text="Last Name" class="label font-weight-bold m-b-5"></Label>
+                    <TextField class="input" [(ngModel)]="registration.LastName"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label text="Email" class="label font-weight-bold m-b-5"></Label>
+                    <TextField class="input" [(ngModel)]="registration.Email"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label text="Mobile" class="label font-weight-bold m-b-5"></Label>
+                    <TextField secure="true" class="input" [(ngModel)]="registration.Phone"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <Button class="btn btn-primary w-full" text="Register" (tap)="register()"></Button>
+                <Label (tap)="goBack()" text="Already a member? Login here." class="text-center footnote"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

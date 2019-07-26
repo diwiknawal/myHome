@@ -4,6 +4,7 @@ import * as appSettings from "tns-core-modules/application-settings";
 import { HashLocationStrategy } from '@angular/common';
 import { Router } from '@angular/router';
 import { RouterExtensions } from 'nativescript-angular/router';
+import { Registration } from '../Shared/Model/Registration';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class SplashscreenComponent implements AfterViewInit {
 
   view: View;
   showmessage: boolean=false;
-  userMobileNumber:string;  
+  userMobileNumber:string; 
+  registration:Registration; 
 
   constructor(private routerExtensions: RouterExtensions,private page: Page) {
    this.userMobileNumber = appSettings.getString("userMobileNumber");
@@ -32,11 +34,15 @@ export class SplashscreenComponent implements AfterViewInit {
   startBackgroundAnimation() {
     this.view.animate({
       scale: { x: 0.0, y: 0.0 },
-      duration: 10000
+      duration: 1000
     }).then(()=>{
       console.log(this.userMobileNumber)
-     if(this.userMobileNumber==="" || this.userMobileNumber===undefined){
+    
+     if(this.userMobileNumber==="" || this.userMobileNumber===undefined || this.userMobileNumber==="0"){
       this.routerExtensions.navigate(["/registration"]);
+     }
+     else{
+      alert(this.userMobileNumber)
      }
     })
   }
