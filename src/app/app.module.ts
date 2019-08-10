@@ -7,6 +7,7 @@ import { AppComponent } from "./app.component";
 import { DataServiceService } from "./Shared/Database/data-service.service";
 import { SplashscreenComponent } from "./splashscreen/splashscreen.component";
 import { RegistrationComponent } from "./registration/registration.component";
+import { ItemsComponent } from "./items/items.component";
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -27,7 +28,8 @@ import { RegistrationComponent } from "./registration/registration.component";
     declarations: [
         AppComponent,
         SplashscreenComponent,
-        RegistrationComponent
+        RegistrationComponent,
+        ItemsComponent
     ],
     providers: [DataServiceService],
     schemas: [

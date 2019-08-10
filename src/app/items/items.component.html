@@ -1,0 +1,33 @@
+<ActionBar title="{N} Login Example">
+    <NavigationButton text="Back" ios.position="left"></NavigationButton>
+</ActionBar>
+<!-- <GridLayout backgroundColor="#CCCCCC">
+    <StackLayout margin="10" verticalAlignment="top">
+        <StackLayout class="input-field">
+            <TextField class="input" [(ngModel)]="registration.FirstName" hint="enter item name"></TextField>
+            <StackLayout class="hr-light"></StackLayout>
+        </StackLayout>
+        <Button class="btn btn-primary" text="Register" (tap)="register()"></Button>
+    </StackLayout>
+    
+</GridLayout> -->
+<StackLayout margin="2" verticalAlignment="top">
+<AbsoluteLayout>
+        <TextField class="input" left="10" top="10" width="260" [(ngModel)]="registration.FirstName" hint="enter item name"></TextField>
+        <Button backgroundColor="#CCCCCC" left="280" top="10" width="90" text="Add" (tap)="additem()"></Button>
+    <!-- <Label text="10, 10" left="10" top="10" width="90" height="90" backgroundColor="red"></Label> -->
+    <!-- <Label text="110, 10" left="110" top="10" width="90" height="90" backgroundColor="green"></Label> -->
+</AbsoluteLayout>
+
+<GridLayout backgroundColor="#CCCCCC">
+        <ScrollView>
+                <StackLayout>
+                    <ListView height="150" [items]="countries">
+                        <ng-template let-country="item" let-i="index" let-odd="odd" let-even="even">
+                            <!-- ....... -->
+                        </ng-template>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+</GridLayout>

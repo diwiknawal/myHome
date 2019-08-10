@@ -42,7 +42,7 @@ export class SplashscreenComponent implements AfterViewInit {
       this.routerExtensions.navigate(["/registration"]);
      }
      else{
-      alert(this.userMobileNumber)
+      this.routerExtensions.navigate(["/items"]);
      }
     })
   }
